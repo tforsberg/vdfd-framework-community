@@ -1,0 +1,120 @@
+Object
+
+// This event is sent when the report is run and the cCrystalReport COM object has been created.
+
+//Procedure OnInitializeReport handle hoReport
+//    Integer eDestination
+//    String  sSelection
+//
+//    Forward Send OnInitializeReport hoReport
+//
+//    // Set the print destination.
+//    // Get output destination option to eDestination
+//    Set peOutputDestination to eDestination
+//
+//    // Set the selection formula.
+//    // Create selection formula in sSelection
+//    Set ComRecordSelectionFormula of hoReport to sSelection
+//
+//    // Set the Sort Order. (Delete the existing sort order and create new order)
+//    Send DeleteSortOrder of hoReport
+//    Send AppendSortField of hoReport "TABLE1" "Field1" crDescendingOrder // or crAscendingOrder
+//    Send AppendSortField of hoReport "TABLE2" "Field2" crDescendingOrder // or crAscendingOrder
+//
+//End_Procedure
+
+// This event is called when report is sent to previewer.
+
+//Procedure OnDisplayReport Handle hoReport
+//    Handle hoViewer
+//
+//    Forward Send OnDisplayReport hoReport
+//
+//    // viewer options can be customized by setting properties of the active/x viewer object
+//    Get ActiveXReportViewerObject of hoReport to hoViewer
+//
+//    //Set ComDisplayToolbar           of hoViewer To True
+//    //Set ComDisplayTabs              of hoViewer To False
+//    //Set ComDisplayGroupTree         of hoViewer To False
+//    //Set ComEnableGroupTree          of hoViewer To False
+//    //Set ComEnablePrintButton        of hoViewer To True
+//    //Set ComEnableCloseButton        of hoViewer To False
+//    //Set ComEnableRefreshButton      of hoViewer To False
+//    //Set ComEnableExportButton       of hoViewer To True
+//    //Set ComEnableSearchExpertButton of hoViewer To True
+//    //Set ComEnableHelpButton         of hoViewer To False
+//    //Set ComEnableZoomControl        of hoViewer To True
+//    //Set ComEnableProgressControl    of hoViewer To True
+//    //Set ComEnableSearchControl      of hoViewer To True
+//    //Set ComEnableNavigationControls of hoViewer To True
+//    //Set ComEnableDrillDown          of hoViewer To False
+//    //Set ComEnableAnimationCtrl      of hoViewer To True
+//    //Set ComEnableSelectExpertButton of hoViewer To False
+//    //Set ComLaunchHTTPHyperlinksInNewBrowser of hoViewer To True
+//End_Procedure
+
+// This event is called when report is sent to Export.
+
+//Procedure OnExportReport Handle hoReport
+//    Handle hoExport
+//
+//    Forward Send OnExportReport hoReport
+//
+//    // By default Export options will be prompted when report is run.
+//     Set pbExportPrompt of hoReport to True // will prompt for all export information
+//    // Or, Export can be set up within the program
+//    //Set pbExportPrompt of hoReport to False // suppress prompt for all export information
+//    //Get ExportObject of hoReport to hoExport
+//
+//    // Sample for export to disk file (Word)
+//    //Set ComDestinationType of hoExport to crEDTDiskFile
+//    //Set ComFormatType      of hoExport to crEFTWordForWindows
+//    //Set ComDiskFileName    of hoExport to "Report.doc"
+//
+//    // Sample for export to disk file (PDF)
+//    //Set ComDestinationType of hoExport to crEDTDiskFile
+//    //Set ComFormatType      of hoExport to crEFTPortableDocFormat
+//    //Set ComDiskFileName    of hoExport to "Report.pdf"
+//
+//    // Sample for export to disk file (XML)
+//    //Set ComDestinationType of hoExport to crEDTDiskFile
+//    //Set ComFormatType      of hoExport to crEFTXML
+//    //Set ComXMLFileName     of hoExport to "Report.xml"
+//
+//    // Sample for export to disk file (HTML)
+//    //Set ComDestinationType of hoExport to crEDTDiskFile
+//    //Set ComFormatType      of hoExport to crEFTHTML40
+//    //Set ComHTMLFileName    of hoExport to "Report.html"
+//
+//    // Sample for export to mapi
+//    //Get ExportObject of hoReport to hoExport
+//    //Set ComDestinationType of hoExport to crEDTEMailMAPI
+//    //Set ComFormatType      of hoExport to crEFTWordForWindows
+//    //Set ComDiskFileName    of hoExport to "Report.dat"
+//    //Set ComMailToList      of hoExport to "Add-name@name.net"
+//    //Set ComMailSubject     of hoExport to "Add-Subject"
+//    //Set ComMailMessage     of hoExport to "Add-Message"
+//    //Set ComMailBccList     of hoExport to "Add-name@name.net"
+//
+//    // Sample for export to application (Word)
+//    //Get ExportObject of hoReport to hoExport
+//    //Set ComDestinationType of hoExport to crEDTApplication
+//    //Set ComFormatType      of hoExport To crEFTWordForWindows
+//
+//End_Procedure
+
+// This event is called when report is sent to printer.
+
+//Procedure OnPrintReport Handle hoReport
+//    Forward Send OnPrintReport hoReport
+//
+//    Set pbPrinterPrompt of hoReport to True // will prompt to set-up printer
+//
+//    //Or... printer can be set up within the program
+//    //Send ComSelectPrinter of hoReport "sDriverName" "sPrinterName" "sPortName"
+//    //Set piPrinterCopies   of hoReport to 1
+//    //Set pbPrinterCollate  of hoReport to True
+//
+//End_Procedure
+
+End_Object

@@ -1,0 +1,16 @@
+Object
+
+    // Send DoProcess of this Business Process Object (BPO)
+    // to start the business process.
+    // DoProcess is a predefined method of the BusinessProcess class.
+    //   Send DoProcess of oBusinessProcess1
+
+    // OnProcess
+    // ---------
+    // Place your processing code into Procedure OnProcess.
+    // OnProcess is a predefined method in the BusinessProcess class.
+
+    Procedure OnProcess
+    End_Procedure
+
+End_Object

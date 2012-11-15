@@ -1,0 +1,21 @@
+Object
+
+    //Show_Dialog is a predefined function in the OpenDialog class.
+    //Call the OpenDialog via:
+
+    //get Show_Dialog to iIntegerVariable
+
+    //DoCallOpenDialog is NOT a predefined method in the OpenDialog class,
+    //DoCallOpenDialog is just a code sample.
+    //You can call DoCallOpenDialog from another object, such as a button.
+
+    //Procedure DoCallOpenDialog
+    //    Boolean bOk
+    //
+    //    Get Show_Dialog To bOk
+    //    If (bOk) Begin
+    //        
+    //    End
+    //End_Procedure
+
+End_Object

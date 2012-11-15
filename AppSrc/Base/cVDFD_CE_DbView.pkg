@@ -1,0 +1,38 @@
+//*****************************************************************************************
+// Copyright (c)  2004  Todd Forsberg d/b/a Threshold Software (VDFD)
+// All rights reserved.
+//
+// $Authors     : Todd Forsberg (todd_forsberg@hotmail.com)
+//
+// $FileName    :
+// $ProjectName : VDF Framework
+// $Created     :
+// $Type        :
+//
+// Contents:
+//
+//
+// Properties:
+//
+//
+// Methods:
+//
+//
+//
+//
+//*****************************************************************************************
+Use DfClient.pkg
+
+Class cVDFD_CE_DbView is a dbView
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+
+    End_Procedure
+
+    Procedure End_Construct_Object
+        Forward Send End_Construct_Object
+
+    End_Procedure
+
+End_Class

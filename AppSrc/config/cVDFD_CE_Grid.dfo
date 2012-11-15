@@ -1,0 +1,35 @@
+Object
+
+    Set Size to 70 150
+
+    Set Line_Width to 3 0 // size and Line_width MUST be set before any column properties
+
+    Set Form_Width    0 to 47
+    Set Header_Label  0 to "Column 1"
+
+    Set Form_Width    1 to 47
+    Set Header_Label  1 to "Column 2"
+
+    Set Form_Width    2 to 47
+    Set Header_Label  2 to "Column 3"
+
+    //Sample method of how to fill a grid
+
+    //Procedure DoFillGrid
+    //    Integer iRow iMaxRows
+    //
+    //    Move 20 to iMaxRows
+    //    For iRow From 1 to iMaxRows
+    //        Send Add_Item Msg_None ("Col 1, row " + String (iRow))
+    //        Send Add_Item Msg_None ("Col 2, row " + String (iRow))
+    //        Send Add_Item Msg_None ("Col 3, row " + String (iRow))
+    //    Loop
+    //End_Procedure
+
+    //Procedure OnChange Integer iNewItem
+    //    String sValue
+    //
+    //    Get Value iNewItem to sValue // value of changed cell
+    //End_Procedure
+
+End_Object

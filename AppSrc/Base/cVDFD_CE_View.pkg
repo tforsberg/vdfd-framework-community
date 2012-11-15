@@ -1,0 +1,15 @@
+Use Dfadlg.pkg
+
+Class cVDFD_CE_View is a View
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+
+    End_Procedure
+
+    Procedure End_Construct_Object
+        Forward Send End_Construct_Object
+
+    End_Procedure
+
+End_Class

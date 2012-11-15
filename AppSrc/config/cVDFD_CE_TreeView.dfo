@@ -1,0 +1,9 @@
+Object
+
+    Procedure OnCreateTree
+        // Add tree items here, via the AddTreeItem function.
+
+        // Get AddTreeItem sText hRoot iItemData iImage iSelImage To hItem
+    End_Procedure
+
+End_Object

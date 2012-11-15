@@ -1,0 +1,13 @@
+[Header]
+Mask=*.src;*.vw;*.sl;*.dg;*.rv;*.bp;*.pkg;*.wo;*.dd;*.inc;*.tpl;*.dfo;*.asp;*.asa;*.htm;*.html;*.css;*.js
+Active=0
+SubDirectories=1
+WholeWordOnly=0
+SearchWhere=0
+Location=E:\Projects\VDFD-Framework\Libraries\Communitiy\IdeSrc\Todd_FindInFiles.dsk
+[E:\Projects\VDFD-Framework\Libraries\Communitiy\AppSrc]
+IsEnabled=1
+[E:\Projects\VDFD-Framework\Libraries\Communitiy\DdSrc]
+IsEnabled=1
+[E:\Projects\VDFD-Framework\Libraries\Communitiy\AppHtml]
+IsEnabled=1

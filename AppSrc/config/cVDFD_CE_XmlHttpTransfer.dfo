@@ -1,0 +1,8 @@
+Object
+
+    //  This is an object of the cXMLHttpTransfer class. It handles HTTP
+    //  requests for sending and receiving XML documents. This class allows
+    //  you to transfer and receive data that is larger than the string size
+    //  limitations imposed by Visual DataFlex.
+
+End_Object

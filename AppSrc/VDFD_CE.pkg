@@ -1,0 +1,99 @@
+// VDFD_CE.pkg
+//
+// Precompile package
+//
+
+Use DFALLENT.pkg
+
+// DAW Classes
+Use Base\cVDFD_CE_Array.pkg
+Use Base\cVDFD_CE_BitmapContainer.pkg
+Use Base\cVDFD_CE_BusinessProcess.pkg
+Use Base\cVDFD_CE_Button.pkg
+Use Base\cVDFD_CE_Animation.pkg
+Use Base\cVDFD_CE_Application.pkg
+Use Base\cVDFD_CE_CJContextMenu.pkg
+Use Base\cVDFD_CE_CJGrid.pkg
+Use Base\cVDFD_CE_CJGridColumn.pkg
+Use Base\cVDFD_CE_CJGridColumnRowIndicator.pkg
+Use Base\cVDFD_CE_CJGridPromptList.pkg
+Use Base\cVDFD_CE_CJMenuBar.pkg
+Use Base\cVDFD_CE_CJSkinFramework.pkg
+Use Base\cVDFD_CE_CJStatusbar.pkg
+Use Base\cVDFD_CE_CJStatusbarPane.pkg
+Use Base\cVDFD_CE_CJToolbar.pkg
+Use Base\cVDFD_CE_Crystal.pkg
+Use Base\cVDFD_CE_CrystalActiveXReportViewer.pkg
+Use Base\cVDFD_CE_DbCJGrid.pkg
+Use Base\cVDFD_CE_DbCJGridColumn.pkg
+Use Base\cVDFD_CE_DbCJGridPromptList.pkg
+Use Base\cVDFD_CE_DbRichEdit.pkg
+Use Base\cVDFD_CE_DbScrollingContainer.pkg
+Use Base\cVDFD_CE_DbSplitterContainer.pkg
+Use Base\cVDFD_CE_DbTextEdit.pkg
+Use Base\cVDFD_CE_FtpTransfer.pkg
+Use Base\cVDFD_CE_Checkbox.pkg
+Use Base\cVDFD_CE_HtmlHelp.pkg
+Use Base\cVDFD_CE_HttpTransfer.pkg
+Use Base\cVDFD_CE_IdleHandler.pkg
+Use Base\cVDFD_CE_ImageList32.pkg
+Use Base\cVDFD_CE_IniFile.pkg
+Use Base\cVDFD_CE_LinkLabel.pkg
+Use Base\cVDFD_CE_MapiHandler.pkg
+Use Base\cVDFD_CE_Object.pkg
+Use Base\cVDFD_CE_ColorDialog.pkg
+Use Base\cVDFD_CE_ComboForm.pkg
+Use Base\cVDFD_CE_Container3D.pkg
+Use Base\cVDFD_CE_ProgressBar.pkg
+Use Base\cVDFD_CE_RichEdit.pkg
+Use Base\cVDFD_CE_ScrollingContainer.pkg
+Use Base\cVDFD_CE_SplitterContainer.pkg
+Use Base\cVDFD_CE_TextEdit.pkg
+Use Base\cVDFD_CE_ToolTipController.pkg
+Use Base\cVDFD_CE_WinReport2.pkg
+Use Base\cVDFD_CE_XmlHttpTransfer.pkg
+Use Base\cVDFD_CE_DbBitmap.pkg
+Use Base\cVDFD_CE_DbCheckbox.pkg
+Use Base\cVDFD_CE_DbComboForm.pkg
+Use Base\cVDFD_CE_DbContainer3D.pkg
+Use Base\cVDFD_CE_DbForm.pkg
+Use Base\cVDFD_CE_DbGrid.pkg
+Use Base\cVDFD_CE_DbGroup.pkg
+Use Base\cVDFD_CE_DbList.pkg
+Use Base\cVDFD_CE_DbModalPanel.pkg
+Use Base\cVDFD_CE_DbRadioGroup.pkg
+Use Base\cVDFD_CE_DbSpinForm.pkg
+Use Base\cVDFD_CE_DbTabDialog.pkg
+Use Base\cVDFD_CE_DbTabDialogView.pkg
+Use Base\cVDFD_CE_DbTrackbar.pkg
+Use Base\cVDFD_CE_DbView.pkg
+Use Base\cVDFD_CE_DfTimer.pkg
+Use Base\cVDFD_CE_FontDialog.pkg
+Use Base\cVDFD_CE_Form.pkg
+Use Base\cVDFD_CE_Grid.pkg
+Use Base\cVDFD_CE_Group.pkg
+Use Base\cVDFD_CE_LineControl.pkg
+Use Base\cVDFD_CE_List.pkg
+Use Base\cVDFD_CE_ModalPanel.pkg
+Use Base\cVDFD_CE_OpenDialog.pkg
+Use Base\cVDFD_CE_PrintDialog.pkg
+Use Base\cVDFD_CE_Radio.pkg
+Use Base\cVDFD_CE_RadioGroup.pkg
+Use Base\cVDFD_CE_ReportView.pkg
+Use Base\cVDFD_CE_SaveAsDialog.pkg
+Use Base\cVDFD_CE_Set.pkg
+Use Base\cVDFD_CE_SpinForm.pkg
+Use Base\cVDFD_CE_TabDialog.pkg
+Use Base\cVDFD_CE_TextBox.pkg
+Use Base\cVDFD_CE_ToolPanel.pkg
+Use Base\cVDFD_CE_Trackbar.pkg
+Use Base\cVDFD_CE_TreeView.pkg
+Use Base\cVDFD_CE_View.pkg
+
+// Added 2012-10-13
+Use Base\cVDFD_CE_ClientArea.pkg 
+Use Base\cVDFD_CE_Panel.pkg
+
+// Added 2012-10-14
+Use Base\cVDFD_CE_DbTabPage.pkg
+

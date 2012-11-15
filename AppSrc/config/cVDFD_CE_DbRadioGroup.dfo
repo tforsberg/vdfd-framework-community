@@ -1,0 +1,23 @@
+Object
+
+    Set Size to 54 77
+
+    Object oRadio1 is a Radio
+        Set Label to "Radio Label 1"
+        Set Size to 10 61
+        Set Location to 10 5
+    End_Object
+
+    Object oRadio2 is a Radio
+        Set Label to "Radio Label 2"
+        Set Size to 10 61
+        Set Location to 25 5
+    End_Object
+
+    Object oRadio3 is a Radio
+        Set Label to "Radio Label 3"
+        Set Size to 10 61
+        Set Location to 40 5
+    End_Object
+
+End_Object

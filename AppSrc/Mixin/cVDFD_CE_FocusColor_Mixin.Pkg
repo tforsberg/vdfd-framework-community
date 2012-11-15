@@ -1,0 +1,91 @@
+//**********************************************************************************[v3]***
+// Copyright (c) 2006 Todd Forsberg (d/b/a Threshold Software)
+// All rights reserved.
+//
+// +-----------------------------------------------------------------+
+// | *** COPYRIGHT 2006, Threshold Software.  ALL RIGHT RESERVED *** |
+// | ***        NO PART OF THIS CODE MAY BE TRANSMITTED          *** |
+// | ***                TO NON-LICENSE HOLDERS                   *** |
+// +-----------------------------------------------------------------+
+//
+// DO NOT DISTRIBUTE THIS FILE OR ANY PART OF IT !
+//
+// $FileName    : cVDFD_FocusColor_Mixin.pkg
+// $ProjectName :
+// $Authors     : Todd Forsberg
+// $Created     :
+//
+// Required Files:
+//
+//
+// Contents:
+//
+//
+// Properties:
+//
+//
+// Methods:
+//
+//
+//*****************************************************************************************
+
+Use VdfBase.pkg
+
+{ ClassType=Mixin }
+Class cVDFD_FocusColor_Mixin Is A Mixin
+
+    Procedure Define_VDFD_FocusColor_Mixin
+        Property Boolean pbFocusColor   True
+
+        { PropertyType=Color }
+        { Visibility=Private }
+        Property Integer piOriginalColor
+
+        { PropertyType=Color }
+        { EnumList= "clScrollBar, clBackground, clActiveCaption, clInactiveCaption, clMenu, clWindow" }
+        { EnumList+="clWindowFrame, clMenuText, clWindowText, clCaptionText, clActiveBorder" }
+        { EnumList+="clInactiveBorder, clAppWorkSpace, clHighlight, clHighlightText, clBtnFace" }
+        { EnumList+="clBtnShadow, clGrayText, clBtnText, clInactiveCaptionText, clBtnHighlight" }
+        { EnumList+="cl3DDkShadow, cl3DLight, clInfoText, clInfoBk, clDefault, clNone" }
+        { EnumList+="clAqua, clBlack, clBlue, clDkGray, clFuchsia, clGray, clGreen, clLime, clLtGray" }
+        { EnumList+="clMaroon, clNavy, clOlive, clPurple, clRed, clSilver, clTeal, clWhite, clYellow" }
+        { Category=Appearance }
+        Property Integer piFocusColor 10354687 // 8454143 //  clInfoBk
+//        Showln "R:" (R_From_RGB(10354687))
+//        Showln "G:" (G_From_RGB(10354687))
+//        Showln "B:" (B_From_RGB(10354687))
+    End_Procedure
+
+    { MethodType=Event }
+    Procedure OnSetFocus
+        Forward Send OnSetFocus
+        Integer iOrigClr iFocusColor iTemp
+        If (pbFocusColor(Self)) Begin
+            Get piOriginalColor to iTemp
+            If (iTemp = 0) Begin
+                Get Color to iOrigClr
+                Set piOriginalColor to iOrigClr
+            End
+            Get piFocusColor to iFocusColor
+            //NOTE: Setting the COLOR property triggers the PAINT method also
+            Set Color to iFocusColor
+        End
+    End_Procedure
+
+    { MethodType=Event }
+    Procedure OnKillFocus
+        Forward Send OnKillFocus
+        Integer iOriginalColor
+        If (pbFocusColor(Self)) Begin
+            Get piOriginalColor to iOriginalColor
+            If (iOriginalColor <> 0) Begin
+                //NOTE: Setting the COLOR property triggers the PAINT method also
+                Set Color to iOriginalColor
+                Set piOriginalColor to 0
+            End
+        End
+    End_Procedure
+
+End_Class      // cVDFD_FocusColor_Mixin
+
+// End of File: cVDFD_FocusColor_Mixin.pkg

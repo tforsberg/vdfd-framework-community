@@ -1,0 +1,10 @@
+Object
+
+    Procedure OnCreate
+        // Add images here...
+        // Get AddTransparentImage sImage iTransparentColor To iIndex
+        //     or
+        // Get AddImage sImage To iIndex
+    End_Procedure
+
+End_Object

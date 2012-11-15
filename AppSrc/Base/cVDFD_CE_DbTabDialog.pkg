@@ -1,0 +1,20 @@
+// Source File: cVDFD_CE_DbTabDialog.pkg
+
+Use dfTabDlg.pkg
+
+{ CompositeClass=cVDFD_CE_DbTabPage }
+Class cVDFD_CE_DbTabDialog is a dbTabDialog
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+
+    End_Procedure
+
+    Procedure End_Construct_Object
+        Forward Send End_Construct_Object
+
+    End_Procedure
+
+End_Class   // cVDFD_CE_DbTabDialog
+
+// End of File: cVDFD_CE_DbTabDialog.pkg

@@ -1,0 +1,7 @@
+Object oFtpTransfer is a cFtpTransfer
+
+    Procedure OnTransferStatus Integer iBytesTransferred Integer iFileSize
+        // You can abort file transfer here with 'Send CancelTransfer'
+    End_Procedure
+
+End_Object

@@ -1,0 +1,54 @@
+//***************************************************************************
+//*
+//* Class:        cVDFD_Panel
+//* Package Name: cVDFD_Panel.pkg
+//*
+//***************************************************************************
+
+Use Dfpanel.pkg
+
+Class cVDFD_CE_Panel is a Panel
+
+    // Construct_Object: Object constructor.
+    Procedure Construct_object
+        Forward Send Construct_Object
+        
+        // Define new Properties: Property {Type} {pxName} {initial_value}
+        Property Handle phoDockingManager
+        
+        // Create child objects
+        
+        // Set property values:
+        
+    End_Procedure
+
+    // Create and augment procedure and functions
+    Procedure Minimize
+        Boolean bResult
+        Handle hWnd
+        Get Window_Handle to hWnd
+        Move (ShowWindow(hWnd,SW_MINIMIZE)) to bResult
+    End_Procedure
+
+    Procedure Hide
+        Boolean bResult
+        Handle hWnd
+        Get Window_Handle to hWnd
+        Move (ShowWindow(hWnd,SW_HIDE)) to bResult
+    End_Procedure
+    
+    Procedure Maximize
+        Boolean bResult
+        Handle hWnd
+        Get Window_Handle to hWnd
+        Move (ShowWindow(hWnd,SW_MAXIMIZE)) to bResult
+    End_Procedure
+    
+    Procedure ShowMaximized
+        Boolean bResult
+        Handle hWnd
+        Get Window_Handle to hWnd
+        Move (ShowWindow(hWnd,SW_SHOWMAXIMIZED)) to bResult
+    End_Procedure
+
+End_Class // cVDFD_Panel

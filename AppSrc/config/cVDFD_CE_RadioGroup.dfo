@@ -1,0 +1,33 @@
+Object
+    Set Size to 54 77
+
+    Object oRadio1 is a Radio
+        Set Label to "Radio Label 1"
+        Set Size to 10 61
+        Set Location to 10 5
+    End_Object
+
+    Object oRadio2 is a Radio
+        Set Label to "Radio Label 2"
+        Set Size to 10 61
+        Set Location to 25 5
+    End_Object
+
+    Object oRadio3 is a Radio
+        Set Label to "Radio Label 3"
+        Set Size to 10 61
+        Set Location to 40 5
+    End_Object
+
+    Procedure Notify_Select_State Integer iToItem Integer iFromItem
+        Forward Send Notify_Select_State iToItem iFromItem
+        //for augmentation
+    End_Procedure
+
+    //If you set Current_Radio, you must set it AFTER the
+    //radio objects have been created AND AFTER Notify_Select_State has been
+    //created. i.e. Set in bottom-code of object at the end!!
+
+    //Set Current_Radio To 0
+
+End_Object

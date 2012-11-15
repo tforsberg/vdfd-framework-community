@@ -1,0 +1,7 @@
+Object oHttpTransfer is a cHttpTransfer
+
+    Procedure OnDataReceived String sContentType String sData
+        // You can abort file transfer here with 'Send CancelTransfer'
+    End_Procedure
+
+End_Object

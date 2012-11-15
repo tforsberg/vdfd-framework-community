@@ -1,0 +1,70 @@
+//**********************************************************************************[v3]***
+// Copyright (c) 2006 Threshold Software
+// All rights reserved.
+//
+// DO NOT DISTRIBUTE THIS FILE OR ANY PART OF IT !
+//
+// $FileName    : cVDFD_ClientArea.pkg
+// $ProjectName : VDFD Framework
+// $Authors     : Todd Forsberg
+// $Created     : 05.31.2006  18:57
+//
+// Required Files:
+//
+//
+// Contents:
+//
+//
+// Properties:
+//
+//
+// Methods:
+//
+//
+//*****************************************************************************************
+
+//* Class:        cVDFD_ClientArea
+//* Package Name: cVDFD_ClientArea.pkg
+
+//Use VDFD_Commands.pkg
+Use Dfpanel.pkg
+Use Mixin\cVDFD_CE_ClassNameArray_Mixin.pkg
+
+Class cVDFD_CE_ClientArea is a ClientArea
+
+    // Construct_Object: Object constructor.
+    Procedure Construct_Object
+        Forward Send Construct_Object
+    
+        // Define new Properties: Property {Type} {pxName} {initial_value}
+    
+        // Create child objects
+    
+        // Set property values:
+    
+    End_Procedure
+
+    // Finish object construction
+    Procedure End_Construct_Object
+        Forward Send End_Construct_Object
+
+    End_Procedure
+
+    // Create and augment procedure and functions
+    
+    Procedure OnResize
+        Forward Send OnResize
+        //VDFD_Showln "OnResize in Client Area"
+        String sBmp
+        Get Bitmap to sBmp
+        If (sBmp <> "") Set Bitmap to sBmp
+    End_Procedure
+
+    Procedure Set GuiSize Integer iHeight Integer iWidth
+        Forward Set GuiSize to iHeight iWidth
+        Send OnResize
+    End_Procedure
+
+End_Class // cVDFD_ClientArea
+
+// End of File: cVDFD_ClientArea.pkg

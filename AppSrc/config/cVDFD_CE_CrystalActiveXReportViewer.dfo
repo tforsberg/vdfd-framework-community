@@ -1,0 +1,27 @@
+Object
+
+// This event is called when report is sent to previewer.
+
+//Procedure OnCreate
+//    Forward Send OnCreate
+//    //Set ComDisplayToolbar           of hoViewer to True
+//    //Set ComDisplayTabs              of hoViewer to False
+//    //Set ComDisplayGroupTree         of hoViewer to False
+//    //Set ComEnableGroupTree          of hoViewer to False
+//    //Set ComEnablePrintButton        of hoViewer to True
+//    //Set ComEnableCloseButton        of hoViewer to False
+//    //Set ComEnableRefreshButton      of hoViewer to False
+//    //Set ComEnableExportButton       of hoViewer to True
+//    //Set ComEnableSearchExpertButton of hoViewer to True
+//    //Set ComEnableHelpButton         of hoViewer to False
+//    //Set ComEnableZoomControl        of hoViewer to True
+//    //Set ComEnableProgressControl    of hoViewer to True
+//    //Set ComEnableSearchControl      of hoViewer to True
+//    //Set ComEnableNavigationControls of hoViewer to True
+//    //Set ComEnableDrillDown          of hoViewer to False
+//    //Set ComEnableAnimationCtrl      of hoViewer to True
+//    //Set ComEnableSelectExpertButton of hoViewer to False
+//    //Set ComLaunchHTTPHyperlinksInNewBrowser of hoViewer to True
+//End_Procedure // OnDisplayReport
+
+End_Object

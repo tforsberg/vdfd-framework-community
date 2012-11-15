@@ -1,0 +1,21 @@
+Object
+
+    //PrintDialog is a predefined function in the PrintDialog class.
+    //Call the PrintDialog via:
+
+    //get PrintDialog to iIntegerVariable
+
+    //DoCallPrintDialog is NOT a predefined method in the PrintDialog class,
+    //DoCallPrintDialog is just a code sample.
+    //You can call DoCallPrintDialog from another object, such as a button.
+
+    //Procedure DoCallPrintDialog
+    //    Boolean bOk
+    //
+    //    Get PrintDialog To bOk
+    //    If (bOk) Begin
+    //       
+    //    End
+    //End_Procedure
+
+End_Object

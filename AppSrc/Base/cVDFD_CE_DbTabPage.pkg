@@ -1,0 +1,17 @@
+Use dfTabDlg.pkg
+
+Class cVDFD_CE_DbTabPage is a dbTabPage
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+
+    End_Procedure
+
+    Procedure End_Construct_Object
+        Forward Send End_Construct_Object
+
+    End_Procedure
+
+End_Class   // cVDFD_CE_DbTabPage
+
+//End of File: cVDFD_CE_DbTabPage.pkg

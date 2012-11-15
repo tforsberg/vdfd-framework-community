@@ -1,0 +1,22 @@
+Object
+
+    //FontDialog is a predefined function in the FontDialog class.
+    //Call the FontDialog via:
+
+    //get FontDialog to iIntegerVariable
+
+    //DoCallFontDialog is NOT a predefined method in the FontDialog class,
+    //DoCallFontDialog is just a code sample.
+    //You can call DoCallFontDialog from another object, such as a button.
+
+    //Procedure DoCallFontDialog
+    //    Boolean bOk
+    //
+    //    Get FontDialog to bOk
+    //    If (bOk) Begin
+    //        
+    //    End
+    //
+    //End_Procedure
+
+End_Object

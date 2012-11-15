@@ -1,0 +1,21 @@
+Object
+
+    //Show_Dialog is a predefined function in the SaveAsDialog class.
+    //Call the OpenDialog via:
+
+    //get Show_Dialog to iIntegerVariable
+
+    //DoCallSaveAsDialog is NOT a predefined method in the SaveAsDialog class.
+    //DoCallSaveAsDialog is just a code sample.
+    //You can call DoCallSaveAsDialog from another object, such as a button.
+
+    //Procedure DoCallSaveAsDialog
+    //    Boolean bOk
+    //
+    //    Get Show_Dialog to bOk
+    //    If (bOk) Begin
+    //        
+    //    End
+    //End_Procedure
+
+End_Object

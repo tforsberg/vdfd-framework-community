@@ -1,0 +1,24 @@
+Object
+
+    //SelectedColor is a predefined property in the ColorDialog class.
+    //Access SelectedColor via:
+
+    //Get SelectedColor to iIntegerVariable
+
+    //SelectColor is NOT a predefined method in the OpenDialog class,
+    //SelectColor is just a code sample.
+    //You can call SelectColor from another object, such as a button.
+
+    //Function SelectColor Returns Integer
+    //    Integer iRgbColor
+    //    Boolean bColorSelected
+
+    //    Get Show_Dialog To bColorSelected
+    //    If (bColorSelected) Begin
+    //        Get SelectedColor To iRgbColor
+    //    End
+    //
+    //    Function_Return iRgbColor
+    //End_Function
+
+End_Object
