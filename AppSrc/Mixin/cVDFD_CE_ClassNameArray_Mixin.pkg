@@ -1,14 +1,13 @@
 //**********************************************************************************[v4]***
-// Copyright (c) 2004  Todd Forsberg d/b/a Threshold Software (VDFD)
+// Copyright (c) 2004 Todd Forsberg d/b/a Threshold Software (VDFD)
 // Copyright (c) 2006 Threshold Software
+// Copyright (c) 2012 VDFD Framework Community Edition
 // All rights reserved.
 //
-// DO NOT DISTRIBUTE THIS FILE OR ANY PART OF IT !
+// $Authors     : Todd Forsberg (todd@vdfd.com)
 //
-// $Authors     : Todd Forsberg (todd_forsberg@hotmail.com)
-//
-// $FileName    : cVDFD_ClassNameArray_Mixin
-// $ProjectName : VDFD Framework
+// $FileName    : cVDFD_CE_ClassNameArray_Mixin
+// $ProjectName : VDFD Framework Community Edition
 // $Created     : July 12, 2004
 // $Type        : Mixin Class
 //
@@ -25,7 +24,6 @@
 //*****************************************************************************************
 
 Use VdfBase.pkg
-//Use VDFD_Commands.pkg
   
 { ClassType=Mixin }
 Class cVDFD_CE_ClassNameArray_Mixin is a Mixin
@@ -73,7 +71,7 @@ Class cVDFD_CE_ClassNameArray_Mixin is a Mixin
         Showln "Class Heirarchy of : " (Name(Self))
         For iLoop from 0 to (iCount-1)
             Get Value of hArray item iLoop to sVal
-            Showln (Repeat(" ",(iLoop*3))) "+--" sVal
+            Showln (Repeat(" ",(iLoop*4))) "+--" sVal
         Loop
         Showln "-------------------------------------------"
     End_Procedure
