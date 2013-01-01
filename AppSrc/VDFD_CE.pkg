@@ -97,3 +97,5 @@ Use Base\cVDFD_CE_Panel.pkg
 // Added 2012-10-14
 Use Base\cVDFD_CE_DbTabPage.pkg
 
+// Added 2013-01-01
+Use Base\cVDFD_CE_TabPage.pkg

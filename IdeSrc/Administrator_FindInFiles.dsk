@@ -1,0 +1,13 @@
+[Header]
+Mask=*.src;*.vw;*.sl;*.dg;*.rv;*.bp;*.pkg;*.wo;*.dd;*.inc;*.tpl;*.dfo;*.asp;*.asa;*.htm;*.html;*.css;*.js
+Active=0
+SubDirectories=1
+WholeWordOnly=0
+SearchWhere=0
+Location=F:\GitHub\vdfd-framework-community\IdeSrc\Administrator_FindInFiles.dsk
+[F:\GitHub\vdfd-framework-community\AppSrc]
+IsEnabled=1
+[F:\GitHub\vdfd-framework-community\DdSrc]
+IsEnabled=1
+[F:\GitHub\vdfd-framework-community\AppHtml]
+IsEnabled=1

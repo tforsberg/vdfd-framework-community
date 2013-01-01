@@ -1,0 +1,17 @@
+Use Windows.pkg
+
+Class cVDFD_CE_TabPage is a TabPage
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+
+    End_Procedure
+
+    Procedure End_Construct_Object
+        Forward Send End_Construct_Object
+
+    End_Procedure
+
+End_Class
+
+// End of File: cVDFD_CE_TabPage.pkg

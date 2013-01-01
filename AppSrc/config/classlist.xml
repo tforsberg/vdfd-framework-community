@@ -1,5 +1,5 @@
 <classList xmlns="http://www.dataaccess.com/VisualDataFlex/2006/classlist/">
-	<VDFLibraryTimeStamp>2012-10-04T10:34:06</VDFLibraryTimeStamp><libraries></libraries>
+	<VDFLibraryTimeStamp>2012-11-15T12:44:24</VDFLibraryTimeStamp><libraries></libraries>
 	<classes>
 		<class>
 			<className>cVDFD_CE_BitmapContainer</className>
@@ -1326,11 +1326,10 @@
 			<libraryID>0</libraryID>
 		</class>
 		<class>
-			<className>cWebWindow</className>
-			<image>cWebWindow.ico</image>
-			<package>cWebWindow.pkg</package>
-			<groupName>WebApp Controls</groupName>
-			<libraryID>0</libraryID>
+			<className>cVDFD_CE_TabPage</className>
+			<image>ControlContainer3D.ico</image>
+			<package>cVDFD_CE_TabPage.pkg</package>
+			<groupName>Base Containers</groupName><libraryID></libraryID>
 		</class>
 	</classes>
 </classList>

@@ -1,4 +1,4 @@
-Use DFAllEnt.pkg
+Use VDFD_CE.pkg
 Use cCJStandardCommandBarSystem.pkg
 
 Object oHtmlHelp is a cHtmlHelp
@@ -8,14 +8,14 @@ Object oApplication is a cApplication
     Set peHelpType to htHtmlHelp
 End_Object
 
-Object oToolTipController is a cToolTipController
+Object oToolTipController is a cVDFD_CE_ToolTipController
     Move Self to ghoToolTipController
 End_Object
 
 Use oEditContextMenu.pkg
 Use oDEOEditContextMenu17.pkg
 
-Object oMain is a Panel
+Object oMain is a cVDFD_CE_Panel
     Set Label To "My Project"
     Set Location to 4 3
     Set Size to 300 450
@@ -87,10 +87,21 @@ Object oMain is a Panel
             End_Object
 
             Object oViewMenu is a cCJMenuItem
-                Set peControlType to xtpControlPopup          
+                Set peControlType to xtpControlPopup
                 Set psCaption to "&View"
                 Set psToolTip to "View"
                 Set psDescription to "Available Views"
+
+                Object oNewViewMenuItem is a cCJMenuItem
+                    Set psCaption to "New View"
+                    Set psTooltip to "New View"
+                
+                    Procedure OnExecute Variant vCommandBarControl
+                        Handle hoClient
+                        Get Client_Id to hoClient
+                        Send Activate_oTEST_VDFD_CE_vw of hoClient
+                    End_Procedure
+                End_Object
             End_Object
             
             Object oReportMenu is a cCJMenuItem
@@ -299,8 +310,9 @@ Object oMain is a Panel
 
     End_Object
 
-    Object oClientArea is a ClientArea
+    Object oClientArea is a cVDFD_CE_ClientArea
         Use StdAbout.pkg
+        Use oTEST_VDFD_CE.vw
 
         Procedure Activate_About
             Send DoAbout "" "" "" "" ""
