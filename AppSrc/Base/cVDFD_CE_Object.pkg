@@ -30,7 +30,14 @@ Class cVDFD_CE_Object is a cObject
         Forward Send End_Construct_Object
         String sName
         Get Object_Label to sName
-        If (sName = "OOBJECT") Set Name to "oVDFD_CE_Object"
+        If (sName = "OOBJECT") Begin 
+            //Move "!$" to sName
+            Get psClassName to sName
+            If (Left(sName,1)="C") Begin
+                Move (Overstrike("o",sName,1)) to sName
+            End
+            Set Name to sName
+        End
 
         // Add your code that needs to be executed at the end of the object construction here:
 

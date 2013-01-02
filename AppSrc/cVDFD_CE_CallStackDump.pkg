@@ -1,0 +1,53 @@
+Use Base\cVDFD_CE_Object.pkg
+
+//---------------------------
+//Call Stack Dump
+//---------------------------
+//GET_PSCALLSTACK (12678) - oVDFD_CE_CALLSTACKDUMP (249) - at Address 96498
+//GET_TESTIT (12680)      - OCLIENTAREA (239)            - at Address 96509
+//GET_TESTIT (12680)      - OTEST_VDFD_CE_VW (241)       - in native code
+//GET_TESTIT (12680)      - ONEWTABDIALOG (243)          - in native code
+//GET_TESTIT (12680)      - OCALLSTACKDUMP_TP (244)      - in native code
+//MSG_ONCLICK (4600)      - OVDFD_CE_BUTTON1 (245)       - at Address 96544
+//MSG_COMMAND (648)       - OVDFD_CE_BUTTON1 (245)       - in native code
+//[start]                 - at Address 96571
+//
+//---------------------------
+//OK   
+//---------------------------
+
+
+Struct tVDFD_CE_CallStackDump
+    String sMethod
+    Handle hmId
+    String sObject
+    Handle hoId
+    String sAddress
+End_Struct
+
+
+Class cVDFD_CE_CallStackDump is a cVDFD_CE_Object
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+        Send AddClassName "!$"  //add classname        
+        tVDFD_CE_CallStackDump[] ptData
+    End_Procedure
+    
+    Function psCallStack Returns String
+        String sVal
+        CallStackDump sVal
+        Function_Return sVal
+    End_Function
+    
+    Procedure BuildArray String sCallStack
+        
+    End_Procedure
+    
+    Function phoCaller Handle hmId Handle hObj Returns Handle
+        String sVal
+        CallStackDump sVal
+        Send BuildArray sVal
+    End_Function
+    
+End_Class

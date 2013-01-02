@@ -1,0 +1,5 @@
+[F:\GitHub\vdfd-framework-community\AppSrc\Base\cVDFD_CE_Object.pkg]
+Source32=If (sName = "OOBJECT") Begin
+ConditionEnabled32=0
+Condition32= 
+32=1

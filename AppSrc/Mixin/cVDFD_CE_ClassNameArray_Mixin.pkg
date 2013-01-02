@@ -51,7 +51,7 @@ Class cVDFD_CE_ClassNameArray_Mixin is a Mixin
         Set Value of hArray item iCount to sClassName
     End_Procedure
     
-    Function psCurrentClassName Returns String
+    Function psClassName Returns String
         Integer iCount
         Handle hArray
         String sClassName

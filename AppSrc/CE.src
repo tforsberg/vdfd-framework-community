@@ -4,7 +4,7 @@ Use cCJStandardCommandBarSystem.pkg
 Object oHtmlHelp is a cHtmlHelp
 End_Object
 
-Object oApplication is a cApplication
+Object oApplication is a cVDFD_CE_Application
     Set peHelpType to htHtmlHelp
 End_Object
 

@@ -161,3 +161,8 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+/AppSrc/*.dep
+/IdeSrc/StudioMetaData.mtd
+/IdeSrc/Workspace.loc
+/Programs/*.exe
+/Programs/*.dbg
