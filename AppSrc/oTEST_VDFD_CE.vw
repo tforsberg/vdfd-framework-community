@@ -1,30 +1,32 @@
-//Use Windows.pkg
-//Use DFClient.pkg
-//Use DFTabDlg.pkg
 
 Use Base\cVDFD_CE_Button.pkg
 
 Use cVDFD_CE_CallStackDump.pkg
 
-
 Function TestIt Returns String
     String sVal
+    Handle hObj hCall
     
-    Handle hObj
     Get Create (RefClass(cVDFD_CE_CallStackDump)) to hObj
     Get psCallStack of hObj to sVal
     Send Info_Box sVal "Call Stack Dump"
+    Get phoCaller of hObj (RefFunc(TestIt)) Self to hCall
     Send Destroy of hObj
-    
+    Send Info_Box (Name(hCall)) "Calling Object"
 End_Function
 
 Activate_View Activate_oTEST_VDFD_CE_vw for oTEST_VDFD_CE_vw
 Object oTEST_VDFD_CE_vw is a dbView
     
-    Set Label to "New View"
+    Set Label to "Test View"
     Set Size to 111 250
     Set Location to 5 7
 
+//    Function TestIt Returns String
+//        String sVal
+//        Forward Get TestIt to sVal
+//    End_Function
+    
     Object oNewTabDialog is a cVDFD_CE_TabDialog
         
         Set Size to 100 240

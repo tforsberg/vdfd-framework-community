@@ -18,6 +18,7 @@ Use Base\cVDFD_CE_Object.pkg
 
 
 Struct tVDFD_CE_CallStackDump
+    String sFullLine
     String sMethod
     Handle hmId
     String sObject
@@ -25,13 +26,14 @@ Struct tVDFD_CE_CallStackDump
     String sAddress
 End_Struct
 
+Use X\cVDFD_Parser.pkg
 
 Class cVDFD_CE_CallStackDump is a cVDFD_CE_Object
     
     Procedure Construct_Object
         Forward Send Construct_Object
         Send AddClassName "!$"  //add classname        
-        tVDFD_CE_CallStackDump[] ptData
+        Property tVDFD_CE_CallStackDump[] ptData
     End_Procedure
     
     Function psCallStack Returns String
@@ -40,14 +42,85 @@ Class cVDFD_CE_CallStackDump is a cVDFD_CE_Object
         Function_Return sVal
     End_Function
     
-    Procedure BuildArray String sCallStack
+    Function piId String sVal Returns Handle
+        Integer iP1 iP2
+        Integer hID
+        Move (Pos("(", sVal, 0)) to iP1
+        Move (Pos(")", sVal, 0)) to iP2                
         
+        Move (Mid(sVal, iP2-iP1-1, iP1+1)) to hID
+        Function_Return hID
+    End_Function
+    
+    Procedure BuildArray String sCallStack
+        Handle hObj
+        String sCR sLF sLine sTemp
+        Integer iLines iLoop iNum 
+        tVDFD_CE_CallStackDump[] Data
+        
+        //Get ptData to Data
+        Move (Character(13)) to sCR
+        Move (Character(10)) to sLF
+        Get Create (RefClass(cVDFD_Parser)) to hObj
+        Get ParamNum of hObj sCR sCallStack to iLines
+        
+        For iLoop from 0 to (iLines-2)
+            
+            Get ParamStr of hObj sCR sCallStack (iLoop+1) to sLine 
+            Move (Replace(sLF, sLine, "")) to sLine    
+            Move sLine to Data[iLoop].sFullLine
+            
+            Get ParamNum of hObj "-" sLine to iNum
+            
+            If (iNum=3) Begin
+                Get ParamStr of hObj "-" sLine 1 to sTemp
+                Move (Trim(sTemp))  to Data[iLoop].sMethod
+                Get piId sTemp      to Data[iLoop].hmId
+                
+                Get ParamStr of hObj "-" sLine 2 to sTemp
+                Move (Trim(sTemp)) to Data[iLoop].sObject
+                Get piId sTemp      to Data[iLoop].hoId
+                            
+                Get ParamStr of hObj "-" sLine 3 to sTemp
+                Move (Trim(sTemp)) to Data[iLoop].sAddress
+                
+            End
+            Else Begin
+
+                Get ParamStr of hObj "-" sLine 2 to sTemp
+                Move (Trim(sTemp)) to Data[iLoop].sAddress
+                
+            End
+            
+        Loop
+        
+        Send Destroy of hObj
+        Set ptData to Data
     End_Procedure
     
-    Function phoCaller Handle hmId Handle hObj Returns Handle
+    Function FindCaller Handle hmId Handle hoId Returns Handle
+        tVDFD_CE_CallStackDump[] Data
+        Integer iItem iSize
+        
+        Get ptData to Data
+        Move (SizeOfArray(Data)) to iSize
+        
+        Repeat 
+            Increment iItem
+        Until ((hmId = Data[iItem].hmId) and (hoId = Data[iItem].hoId))
+
+        Repeat 
+            Increment iItem
+        Until (Data[iItem].sAddress <> "in native code")
+
+        Function_Return (Data[iItem].hoId)
+    End_Function
+    
+    Function phoCaller Handle hmId Handle hoId Returns Handle
         String sVal
         CallStackDump sVal
         Send BuildArray sVal
+        Function_Return (FindCaller(Self, hmId, hoId))
     End_Function
     
 End_Class

@@ -1,0 +1,68 @@
+//TH-Header
+//*****************************************************************************************
+// Copyright (c)  @DY@ Todd Forsberg d/b/a Threshold Software
+// All rights reserved.
+//
+// $FileName    : @FILENAME@
+// $ProjectName : @PROJECTNAME@
+// $Authors     : 
+// $Created     : @DD@.@DM@.@DY@  @TH@:@TM@
+//
+// Contents:
+//
+//*****************************************************************************************
+//TH-RevisionStart
+// __________ _____  ______________________________________________________ by ____________ 
+// @DD@.@DM@.@DY@ @TH@:@TM@ @DESCRIPTION@ @USERNAME@
+//TH-RevisionEnd
+
+
+
+// Class: cVDFD_Parser.pkg
+
+Class cVDFD_Parser Is a DFObject
+
+  //========================================================================//
+
+  Function ParamNum String sDelim  String sFullStr  Returns Integer
+    Integer iCount
+    Move 0 To iCount
+    Repeat
+      Replace sDelim In sFullstr with ''
+      [found] Increment iCount
+    [found] Loop
+    Function_Return (iCount + 1)
+  End_Function
+
+  //========================================================================//
+
+  Function ParamStr String sDelim String sFullStr Integer iGrab Returns String
+    Integer iNum
+    String   sMyStr
+    Integer  iCount iPlace iLong iKeep
+  
+    Move (ParamNum(Self, sDelim, sFullStr)) to iNum
+    Move 0 To iCount
+  
+    Repeat
+      Increment iCount
+      If (iCount <> iGrab) Begin
+        Length sFullStr To iLong
+        Pos sDelim In sFullStr To iPlace
+        Calculate (iLong - iPlace) To iKeep
+        Right sFullStr To sFullStr iKeep
+      End
+    Until (iCount = iGrab)
+    Pos sDelim In sFullStr To iPlace
+    [    found] Left sFullStr To sMyStr  (iPlace - 1)
+    [Not found] Move sFullStr To sMyStr
+    If iCount Gt iNum Move '' To sMyStr
+    Function_Return sMyStr
+  End_Function        // ParamStr
+
+  //=====================================================================//
+
+End_Class
+
+
+
