@@ -166,3 +166,7 @@ pip-log.txt
 /IdeSrc/Workspace.loc
 /Programs/*.exe
 /Programs/*.dbg
+/AppSrc/*.pkd
+/AppSrc/*.fld
+/AppSrc/*.pbg
+/AppSrc/*.pdp
