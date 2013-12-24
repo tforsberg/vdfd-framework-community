@@ -1,4 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+<!--
+function menu_goto( menuform )
+{
+    // see http://www.thesitewizard.com/archive/navigation.shtml
+    // for an explanation of this script and how to use it on your
+    // own site
+
+    var baseurl = "http://www.put-your-domain-name-here.com" ;
+    selecteditem = menuform.newurl.selectedIndex ;
+    newurl = menuform.newurl.options[ selecteditem ].value ;
+    if (newurl.length != 0) {
+      location.href = baseurl + newurl ;
+    }
+}
+//-->
+</script>
+
+</head>
+
 <body>
-Is <b>this</b> thing on?
-TEST
+
+<form action="dummyvalue">
+<select name="newurl" onchange="menu_goto(this.form)">
+<option value="" selected="selected">----- Select A Page -----</option>
+<option value="/index.html">Home</option>
+<option value="/feedback.html">Feedback</option>
+<option value="" disabled="disabled"> ---- Miscellaneous ----</option>
+<option value="/links.html">Related Links</option>
+</select>
+</form>
+
+<p>
+This is a sample web page.
+</p>
 </body>
+</html>
